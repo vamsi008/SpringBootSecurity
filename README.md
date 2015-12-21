@@ -10,7 +10,7 @@ Web Project using spring boot. Tried to use functionality that we can do using s
 ##Using the application for debug purpose.
 
 * Download the package.
-*  It runs on  java 1.8 can change the version to 1.8 if needed.
+*  It runs on  java 1.8 can change the version to 1.7 if needed .
 *  to Run 
  
 
