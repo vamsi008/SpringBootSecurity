@@ -61,9 +61,19 @@ public class EmployeeController {
 	}
 
 	@PreAuthorize("hasAuthority('ADMIN')")
-	@RequestMapping(value = "/admin/employees", method = RequestMethod.GET)
-	public String getEmployeeList() {
-		return "Has access to employees.";
+	@RequestMapping(value = "/employees", method = RequestMethod.GET)
+	public @ResponseBody List<UserVO> getEmployeeList() {
+
+		List<User> userList = userRepository.findAll();
+		List<UserVO> userVOList = null;
+		if (userList != null) {
+			userVOList = new ArrayList<UserVO>();
+			for (User user : userList) {
+				userVOList.add(new UserVO(user));
+			}
+		}
+
+		return userVOList;
 	}
 
 	@RequestMapping(value = "/employee/upload", method = RequestMethod.POST)
