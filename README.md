@@ -1,9 +1,19 @@
 # SpringBootSecurity
-Web Project using spring boot. Tried to add all the functionalities that we can do using spring boot.
+Web Project using spring boot. Tried to use functionality that we can do using spring boot.
 
 * Spring Security.
 * Spring Tiles.
-* Custom Jsp's which are independed of thymeleaf.
-* Method level granuality in security.
+* Custom JSP  which are independent of thyme leaf.
+* Method level granularity in security.
+* Mapping Jackson.
+
+##Using the application for debug purpose.
+
+* Download the package.
+*  It runs on  java 1.8 can change the version to 1.8 if needed.
+*  to Run 
+ 
+
+>     mvn package && java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n -jar target/employeeSecurity-1.0.jar
 
 
