@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<title><tiles:getAsString name="title" /></title>
+		<link href="${pageContext.request.contextPath}/css/appstyle.css" rel="stylesheet" type="text/css">
 	</head>
-	<body>
+	<body class="body">
 		<!-- Header -->
 		<tiles:insertAttribute name="header" />
 		<!-- Body -->

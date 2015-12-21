@@ -1,1 +1,0 @@
-<div>The Footer</div>
