@@ -19,6 +19,8 @@ public class UserVO {
 
 	private List<UserRoleVO> userRoles;
 
+	private String manager;
+
 	public UserVO() {
 
 	}
@@ -29,6 +31,9 @@ public class UserVO {
 		this.username = user.getUsername();
 		this.firstname = user.getFullName();
 		this.email = user.getEmailAddress();
+		if (user.getManager() != null) {
+			this.manager = user.getManager().getUsername();
+		}
 		if (user.getUserRoles() != null) {
 			userRoles = new ArrayList<UserRoleVO>();
 			for (UserRole userRole : user.getUserRoles()) {
@@ -102,6 +107,14 @@ public class UserVO {
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+	public String getManager() {
+		return manager;
+	}
+
+	public void setManager(String manager) {
+		this.manager = manager;
 	}
 
 }

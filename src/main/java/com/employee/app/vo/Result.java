@@ -2,11 +2,13 @@ package com.employee.app.vo;
 
 import java.util.List;
 
+import com.employee.app.stringcontants.Status;
+
 public class Result {
 
-	Object resultObject;
-	List<String> errorList;
-	private String status;
+	private Object resultObject;
+	private List<String> errorList;
+	private Status status;
 
 	public Object getResultObject() {
 		return resultObject;
@@ -24,11 +26,11 @@ public class Result {
 		this.errorList = errorList;
 	}
 
-	public String getStatus() {
+	public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 

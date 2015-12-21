@@ -2,6 +2,9 @@ package com.employee.app.service.user;
 
 import java.util.Collection;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +15,8 @@ import com.employee.app.repository.UserRepository;
 public class UserServiceImpl implements UserService {
 
 	private final UserRepository userRepository;
+	@PersistenceContext
+	private EntityManager entityManager;
 
 	@Autowired
 	public UserServiceImpl(UserRepository userRepository) {
@@ -32,7 +37,5 @@ public class UserServiceImpl implements UserService {
 	public Collection<User> getAllUsers() {
 		return userRepository.findAll();
 	}
-
-
 
 }
