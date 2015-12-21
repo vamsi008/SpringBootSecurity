@@ -8,6 +8,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -116,7 +117,7 @@ public class EmployeeController {
 
 	@PreAuthorize("hasAuthority('MANAGER')")
 	@RequestMapping(value = "/employee/{mail}", method = RequestMethod.GET)
-	public @ResponseBody Result getEmployeeUnderManager(@RequestParam String mail) {
+	public @ResponseBody Result getEmployeeUnderManager(@PathVariable("mail") String mail) {
 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		CurrentUser currentUser = (CurrentUser) authentication.getPrincipal();
