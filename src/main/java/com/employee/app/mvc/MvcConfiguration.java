@@ -38,13 +38,13 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	 * 
 	 * @return tiles configurer
 	 */
-	@Bean
+	/*@Bean
 	public TilesConfigurer tilesConfigurer() {
 		final TilesConfigurer configurer = new TilesConfigurer();
 		configurer.setDefinitions(new String[] { "WEB-INF/jsp/tiles/tiles.xml" });
 		configurer.setCheckRefresh(true);
 		return configurer;
-	}
+	}*/
 
 	/**
 	 * Introduce a Tiles view resolver, this is a convenience implementation
@@ -52,13 +52,13 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	 * 
 	 * @return tiles view resolver
 	 */
-	@Bean
+/*	@Bean
 	public TilesViewResolver tilesViewResolver() {
 		final TilesViewResolver resolver = new TilesViewResolver();
 		resolver.setViewClass(TilesView.class);
 		resolver.setOrder(0);
 		return resolver;
-	}
+	}*/
 
 	@Bean
 
