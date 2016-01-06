@@ -6,6 +6,9 @@ Web Project using spring boot. Tried to use functionality that we can do using s
 * Custom JSP  which are independent of thyme leaf.
 * Method level granularity in security.
 * Mapping Jackson.
+* Added CAS authentication module from spring boot security.
+* Dockerized the spring boot application.
+
 
 ##Using the application for debug purpose.
 

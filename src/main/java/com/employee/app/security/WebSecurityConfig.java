@@ -1,8 +1,5 @@
 package com.employee.app.security;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.inject.Inject;
 
 import org.jasig.cas.client.session.SingleSignOutFilter;
